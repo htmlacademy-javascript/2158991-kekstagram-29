@@ -14,6 +14,8 @@ function getNumber (string) {
       num += string[i];
     }
   }
-  if (num.length === 0) return NaN;
+  if (num.length === 0) {
+    return NaN;
+  }
   return parseInt(num);
 }
