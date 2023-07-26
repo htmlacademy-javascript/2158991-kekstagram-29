@@ -31,7 +31,7 @@ export const createRandomIdFromRangeGenerator = (min,max) => {
   const previousValues = [];
 
   return function () {
-    if (previousValues.length >= (max-min+1)) {
+    if (previousValues.length >= (max - min + 1)) {
       console.err('В диапазоне не осталось свободных значений');
       return null;
     }
@@ -47,3 +47,4 @@ export const createRandomIdFromRangeGenerator = (min,max) => {
 
 export const getRandomArrayElement = (elements) => elements[getRandomInteger(0, elements.length - 1)];
 
+export const getCloneTemplate = (templateId, templateClass) => document.querySelector(templateId).content.querySelector(templateClass).cloneNode(true);
