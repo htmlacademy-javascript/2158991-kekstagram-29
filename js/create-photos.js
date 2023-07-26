@@ -35,4 +35,4 @@ const createComments = () => {
   }
 };
 
-export const PHOTOS = Array.from({length: PHOTO_COUNT},createPhoto);
+export const photos = Array.from({length: PHOTO_COUNT},createPhoto);

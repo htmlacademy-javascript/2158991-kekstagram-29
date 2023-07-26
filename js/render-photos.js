@@ -10,11 +10,11 @@ const createPhoto = ({url, description, likes, comments}) => {
   return photoElement;
 };
 
-export const renderPhoto = (PHOTOS, classContainer) => {
-  const photos = document.createDocumentFragment();
-  PHOTOS.forEach((element) => {
-    photos.appendChild(createPhoto(element));
+export const renderPhoto = (photos, classContainer) => {
+  const photosFragment = document.createDocumentFragment();
+  photos.forEach((element) => {
+    photosFragment.appendChild(createPhoto(element));
   });
   const container = document.querySelector(classContainer);
-  container.appendChild(photos);
+  container.appendChild(photosFragment);
 };
